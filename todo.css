@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.wrapper{
+    width: 100%;
+   height: 100vh;
+   /* overflow: hidden; */
+}
+
+/*header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px; 
+}
+
+header .bar-icon{
+    font-size: 2rem;
+    width: 50%;
+}
+header .bar-icon i {
+    background: #f2f2f2;
+    color: #000;
+    margin-left: 20px;
+}
+
+.clock{
+    color: #000;
+    font-size: 1.35rem;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+.container-list  {
+    margin: 30px auto;
+    border-radius: 25px;
+    max-width: 400px;
+    padding: 35px;
+    width: 100%;
+    box-shadow: 4px 4px 8px #cccccc, -4px -4px 10px #fff;
+    background: #f2f2f2;
+    align-items: center;
+    display: block;
+    
+}
+
+/*버킷리스트 타이틀*/
+.container-list .title{
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(189, 180, 180);
+}
+
+.container-list #form {
+    display: flex;
+    align-items: center;
+}
+
+
+/*input form*/
+.container-list input {
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    box-shadow: 5px 5px 5px #ccc, -2px -4px 10px #fff;
+    display: flex;
+}
+
+.container-list input:active {
+    border: 1px solid green;
+    outline: none;
+}
+
+/*plus 버튼*/
+#Btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: green;
+    box-shadow: 8px 8px 10px #f0f0f0;
+    color: #f2f2f2;
+    border-radius: 5px;
+    margin-left: -40px;
+}
+#Btn i{
+    color: #fff;
+    background: green;
+}
+
+.ul-form{
+    margin-top: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*ul 리스트*/
+.list{
+  position: relative;  
+  left: -10%;
+
+}
+
+li {
+    list-style: none;
+    margin: 5px;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.far{
+    color: red;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+}
+.fas{
+    background: #fff;
+    border: none;
+    color: aquamarine;
+    cursor: pointer;
+}
+.fas:active{
+    color: rgb(89, 97, 22);
+}
+
+span{
+    color: #000;
+}
+
+/*error메세지*/
+.error {
+    font-size: 0.8rem;
+    margin: 10px;
+    color: red;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+/*전체삭제*/
+#allBtn{
+    background: green;
+    color: #f2f2f2;
+    padding: 10px 15px;
+    border: green;
+    border-radius: 5px;
+    margin: 0 auto;  
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+@media (max-width:960px){
+    .wrapper{
+        width: 80%;
+    }
+}
+@media(max-width:768px){
+    .wrapper{
+        width: 100%;
+    }
+}
