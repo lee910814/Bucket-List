@@ -5,6 +5,9 @@ const todoSpan = document.querySelector(".error");
 const allBtn = document.querySelector("#allBtn");
 const clock = document.querySelector(".clock");
 
+
+
+
 let toDos =  [];
 
 const TODO_KEY = "toDos"
@@ -23,19 +26,19 @@ function deleteToDo(e){
 function homeClock(){
     const span = document.createElement("span");
     let date = new Date();
-    let hours = date.getHours();
+    let hour = date.getHours();
     let Minites = date.getMinutes();
-    let seconds = String(date.getSeconds());
+    let seconds =date.getSeconds();
     clock.appendChild(span);
-    clock.innerText = hours + ":"+ Minites + ":" + seconds;
-    if(clock >= 12){
-        span.innerText ="PM";
+    clock.innerText = `${hour < 10 ? `0${hour}`:hour}:${Minites < 10 ? `0${Minites}`: Minites}:${seconds < 10 ? `0${seconds}` : seconds}`;
+    if(clock <= 12){
+        span.innerText = clock + "PM";
     }else{
         span.innerText = "AM";
     }
 }
 
-setInterval(homeClock,1000);
+setInterval(homeClock,50);
 
 
 
@@ -44,7 +47,7 @@ setInterval(homeClock,1000);
 function addList(newTodo){
     const li = document.createElement("li");
     const button = document.createElement("button");
-    const button1 = document.createElement("button");
+    const check = document.createElement("button");
     const span = document.createElement("span");
 
     //에러문
@@ -53,20 +56,24 @@ function addList(newTodo){
     }else{
     span.innerHTML = newTodo;
     todoList.appendChild(li);
-    li.appendChild(button1);
+    li.appendChild(check);
     li.appendChild(span);
     li.appendChild(button);
      todoSpan.innerHTML = "";
      button.className = "far fa-trash-alt" //삭제버튼
-     button1.className = "fas fa-check" //체크버튼
-     button1.addEventListener("click",function(){
+     check.className = "fas fa-check" //체크버튼
+     check.addEventListener("click",()=>{
          span.style.textDecoration="line-through";
-         button1.style.color="red";
+         check.style.color="red";
 
      });
      button.addEventListener("click",deleteToDo);
 }
 }
+
+
+// 전체 삭제
+
 
 //폼에 입력될때
 function saveForm(e){
@@ -90,3 +97,13 @@ if(localTodo !== null){
     toDos = parsed;
     parsed.map(addList);
 }
+
+
+/*side bar*/
+function openNav(){
+    document.getElementById("sideNav").style.width="250px"
+}
+function closeNav() {
+    document.getElementById("sideNav").style.width = "0";
+  }
+

@@ -14,24 +14,32 @@
 
 <body>
     <div class="wrapper">
-        <header>
-            <div class="bar-icon"><i class="fas fa-bars"></i></div>
-            <div class="clock">ffff</div>
-        </header>
-        <section>
+        <section class="bucket">
+            <div class="left">
+                <img src="https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547__480.jpg">
+            </div>
+
+            <div class="right">
+            <!-- 시계 -->
+            <div class="clockForm">
+               <div class="clock"></div>
+            </div>
+
+            <!--버킷리스트-->
             <div class="container-list">
-                <div class="title">
+                <div class="up">
                     <h1>BUCKET LIST</h1>
                 </div>
+
                 <form id="form">
                     <input type="text" placeholder="나만의 버킷리스트를 만들자">
                     <button id="Btn"><i class="fas fa-plus"></i></button>
                 </form>
-                <span class="error"></span>
+                   <span class="error"></span>
                 <div class="ul-form">
                     <ul class="list"></ul>
                 </div>
-                <button id=allBtn>전체삭제</button>
+              </div>
             </div>
         </section>
         <footer>

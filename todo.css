@@ -11,6 +11,8 @@ body {
 .wrapper{
     width: 100%;
    height: 100vh;
+   display: flex;
+   flex-direction: column;
    /* overflow: hidden; */
 }
 
@@ -22,22 +24,38 @@ header{
     height: 50px; 
 }
 
-header .bar-icon{
-    font-size: 2rem;
-    width: 50%;
+.bucket{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
 }
-header .bar-icon i {
-    background: #f2f2f2;
-    color: #000;
-    margin-left: 20px;
+.left{
+    flex-basis: 50%;
+    display: flex;
+}
+.left img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.right{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+/*시계*/
+.clockForm{
+    text-align: center;
+}
 .clock{
-    color: #000;
-    font-size: 1.35rem;
+    color: #ddd;
+    font-size: 5rem;
     width: 50%;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     font-weight: 600;
     margin: 0 10px;
@@ -45,6 +63,7 @@ header .bar-icon i {
 
 section{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -55,7 +74,6 @@ section{
     margin: 30px auto;
     border-radius: 25px;
     max-width: 400px;
-    padding: 35px;
     width: 100%;
     box-shadow: 4px 4px 8px #cccccc, -4px -4px 10px #fff;
     background: #f2f2f2;
@@ -65,15 +83,21 @@ section{
 }
 
 /*버킷리스트 타이틀*/
-.container-list .title{
+.container-list .up{
     text-align: center;
     font-family: 'Rubik', sans-serif;
-    color: rgb(189, 180, 180);
+    color: #fff
+
+}
+.down{
+    flex-basis: 50%;
+    border: 1px solid red;
 }
 
 .container-list #form {
     display: flex;
     align-items: center;
+    padding: 35px;
 }
 
 
@@ -144,7 +168,7 @@ li {
 .fas{
     background: #fff;
     border: none;
-    color: aquamarine;
+    color: #f2f2f2;
     cursor: pointer;
 }
 .fas:active{
@@ -166,6 +190,9 @@ footer{
     display: flex;
     align-items: center;
     justify-items: center;
+}
+.btn{
+    text-align: center;
 }
 
 /*전체삭제*/
